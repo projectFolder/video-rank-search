@@ -132,11 +132,11 @@ namespace WindowsFormsApp1
         private void Form1_Load(object sender, EventArgs e)
         {
             fileCheck fc = new fileCheck();
-            //String pas = fileCheck.AESEncrypt256(Convert.ToString(fc.getHddNum()));
-            String pas = "yRi8Uov7UVtXLbT9H9hnijHZbnCmm4fZDEzHcdyzDtI=";
-            MessageBox.Show(fileCheck.AESDecrypt256(pas));
+            String pas = fileCheck.AESEncrypt256(Convert.ToString(fc.getHddNum()));
+            //String pas = "yRi8Uov7UVtXLbT9H9hnijHZbnCmm4fZDEzHcdyzDtI=";
+            //MessageBox.Show(fileCheck.AESDecrypt256(pas));
 
-            switch (fc.License(this))
+            /*switch (fc.License(this))
             {
                 case fileCheck.checkState.Formally:
                     break;
@@ -147,7 +147,7 @@ namespace WindowsFormsApp1
                 case fileCheck.checkState.Demo:
                     fc.showMsg(pas);
                     break;
-            }
+            }*/
 
             CheckForIllegalCrossThreadCalls = false;
         }
@@ -302,8 +302,6 @@ namespace WindowsFormsApp1
             MessageBox.Show("모든 작업이 완료되었습니다.", "작업완료",MessageBoxButtons.OK, MessageBoxIcon.Information);
 
         }
-
-
 
         #endregion
 
