@@ -17,7 +17,21 @@ namespace WindowsFormsApp2.CustomControl
     {
 
         private String Name;
+        private Color titleColor;
+        private Color subjectColor;
 
+
+        public Color _titleColor
+        {
+            get { return titleColor;  }
+            set { titleColor = value; panel8.BackColor = titleColor; }
+        }
+        public Color _subjectColor
+        {
+            get { return subjectColor;  }
+            set { subjectColor = value; this.BackColor = subjectColor; }
+        }
+    
         public String FrameName
         {
             get { return Name;  }
@@ -32,7 +46,9 @@ namespace WindowsFormsApp2.CustomControl
 
         private void customFrame_Load(object sender, EventArgs e)
         {
-            panel2.SendToBack();
+            panel8.SendToBack();
+            panel10.SendToBack();
+            panel9.SendToBack();
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
